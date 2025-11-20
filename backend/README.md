@@ -1,3 +1,8 @@
+# 2Day StrongMan
+
+school project for web developement
+This is a workout app made using MERN
+
 1. Signup
 
 ```
