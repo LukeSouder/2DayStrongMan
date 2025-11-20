@@ -1,0 +1,101 @@
+.tracker-container {
+  max-width: 90%;               /* relative to viewport width */
+  margin: 3rem auto;
+  padding: 2rem;
+  background: #1f2937;           /* Dark background matching app theme */
+  color: #f3f4f6;                /* Light text color */
+  border-radius: 1rem;
+  text-align: center;
+  box-shadow: 0 0 1rem rgba(0,0,0,0.4);
+  box-sizing: border-box;        /* prevent overflow */
+  overflow-x: hidden;            /* prevent horizontal overflow */
+}
+
+/* List of exercises */
+.workout-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Individual exercise card with aligned columns */
+.workout-card {
+  background: #374151;            
+  padding: 1rem;
+  border-radius: 0.75rem;
+  display: grid;                  
+  grid-template-columns: 1fr minmax(4rem, 1fr) minmax(6rem, 1fr); /* responsive columns */
+  align-items: center;
+  gap: 1rem;
+  box-sizing: border-box;
+  width: 100%;                     /* ensures no overflow */
+}
+
+.workout-card h3 {
+  margin: 0;
+  word-break: break-word;           /* prevent text from overflowing */
+}
+
+/* Weight text */
+.weight {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Buttons container */
+.buttons {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: flex-end;
+  flex-wrap: wrap;                 /* allows buttons to wrap on small screens */
+}
+
+/* Pass and Fail buttons */
+.pass-btn,
+.fail-btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  color: white;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.pass-btn {
+  background-color: #16a34a; 
+}
+
+.pass-btn:hover {
+  background-color: #15803d;
+  transform: scale(1.05);
+}
+
+.fail-btn {
+  background-color: #dc2626; 
+}
+
+.fail-btn:hover {
+  background-color: #b91c1c;
+  transform: scale(1.05);
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 600px) {
+  .workout-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .weight {
+    text-align: left;
+    margin-bottom: 0.5rem;
+  }
+
+  .buttons {
+    justify-content: flex-start;
+    width: 100%;
+  }
+}

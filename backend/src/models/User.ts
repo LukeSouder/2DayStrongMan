@@ -1,0 +1,27 @@
+import mongoose, { Document, Schema } from "mongoose";
+
+export interface IUser extends Document {
+    email: string;
+    password: string;
+}
+
+const userSchema: Schema = new Schema({
+    email: {
+        type: String,
+        required: [true, 'Email is required'],
+        unique: true,
+        lowercase: true,
+        trim: true,
+        match: [
+            /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/,
+            'Please enter a valid email',
+        ],
+    },
+    password: {
+        type: String,
+        required: [true, 'Password is required'],
+        minlength: [6, 'Password must be at least 6 characters long'],
+    },
+});
+
+export default mongoose.model<IUser>('User', userSchema);

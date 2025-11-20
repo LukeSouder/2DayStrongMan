@@ -1,0 +1,23 @@
+.homepage {
+  text-align: center;
+  background: #1f2937;
+  color: #f3f4f6;
+  padding: 3rem;
+  margin: 4rem auto;
+  width: 75%;
+  border-radius: 1rem;
+  border: 2px solid #3b82f6;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+}
+
+.homepage h2 {
+  font-size: 2rem;
+  color: #3b82f6;
+  margin-bottom: 1rem;
+}
+
+.homepage h4 {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #d1d5db;
+}
